@@ -23,9 +23,9 @@ public class Flipkart_App {
 		Thread.sleep(3000);
 		List<WebElement> model_name = rv.findElements(By.className("_4rR01T"));
 		Thread.sleep(3000);
-		List<WebElement> model_price = rv.findElements(By.xpath(".//div[@class='_30jeq3 _1_WHN1']"));
+		List<WebElement> model_price = rv.findElements(By.xpath(".//div[@class='_4rR01T']/../..//div[@class='_30jeq3 _1_WHN1']"));
 		
-		for (WebElement model_details : model_name) {
+		/*for (WebElement model_details : model_name) {
 			String str = model_details.getText();
 			System.out.println(str);
 		}
@@ -34,6 +34,13 @@ public class Flipkart_App {
 		for (WebElement model_price1 : model_price) {
 			String output = model_price1.getText();
 			System.out.println(output);
+		}*/
+		for (int i = 0; i < model_name.size(); i++) {
+			
+			String output = model_name.get(i).getText();
+			String result = model_price.get(i).getText();
+			System.out.println(output+":- "+result);
+			
 		}
 		rv.close();
 

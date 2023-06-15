@@ -1,5 +1,6 @@
 package Multiple_WebElementsHandling;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -30,6 +31,10 @@ public class Flipcart_img_count {
 		
 		List<WebElement> oneplus_8gbRam = rv.findElements(By.xpath(".//span[contains(text(),('8GB RAM')) and starts-with(text(),('OnePlus'))]"));
 		Thread.sleep(3000);
+		/*List<WebElement> oneplus_price = rv.findElements(By.xpath(".//span[@class='a-price-whole']"));
+		List<WebElement> oneplus_image = rv.findElements(By.xpath(".//img[@class='s-image']"));
+		List<WebElement> oneplus_review = rv.findElements(By.xpath(".//span[@class='a-size-base s-underline-text']"));*/
+		
 		for (int i = 0; i < 5; i++) {
 			WebElement modelnames = oneplus_8gbRam.get(i);
 			String modelName_output = modelnames.getText();
@@ -58,8 +63,18 @@ public class Flipcart_img_count {
 			System.out.println(q+" index model review :-"+review_output);
 			
 		}
+		/*Thread.sleep(3000);
+		for (int i = 0; i < args.length; i++) {
+			
+			String output = oneplus_8gbRam.get(i).getText();
+			String result = oneplus_price.get(i).getText();
+			String img_output = oneplus_image.get(i).getText();
+			String review_output = oneplus_review.get(i).getText(); 
+			System.out.println(output+":- "+result+" \n"+review_output+"\n"+img_output);
+			System.out.println("----------------------------------------------------");
+		}*/
 		
-		//rv.close();
+		rv.close();
 	}
 
 }
