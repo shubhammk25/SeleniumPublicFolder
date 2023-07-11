@@ -29,3 +29,4 @@ public class ElementScreenshot_02 {
 	}
 
 }
+//   .//*[local-name()='svg' and @class='value']

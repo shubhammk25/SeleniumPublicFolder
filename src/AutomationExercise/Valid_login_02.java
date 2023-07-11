@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Valid_Login {
-
+public class Valid_login_02 {
+	
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
@@ -67,9 +67,5 @@ public class Valid_Login {
 		rv.close();
 	}
 
+
 }
-/*
-ShubhamKale
-shubhamkale20708@gmail.com
-MSdhoni07
-*/
